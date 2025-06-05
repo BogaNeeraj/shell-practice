@@ -12,11 +12,11 @@ fi
 
 dnf install nodejs -y
 
-if [ $? -ne 0 ]
+if [ $? -eq 0 ]
 then 
  echo "installing nodejs is successfull"
  exit 1
 else 
  echo "installing nodejs is ..Failure"
- 
+
 fi
