@@ -27,8 +27,8 @@ VALIDATE() {
     then 
      echo " $2 is successfull "
     else 
-    echo " $2 is Failure"
-    exit 1
+     echo " $2 is Failure"
+     exit 1
     fi
 
 }
@@ -42,6 +42,6 @@ do
   dnf install $package -y &>> $LOG_FILE
   VALIDATE $? "$package"
  else 
- echo "package is already installed"
+  echo "package is already installed"
  fi
 done
