@@ -9,10 +9,10 @@ N="\e[0m"
 LOGS_FOLDER="/var/logs/shellscript-logs"
 SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
 LOG_FILE="$LOGS_FOLDER/$SCRIPT_NAME.log"
-TIMESTAMP=$(data + %F-%H-%M-%S)
+TIMESTAMP=$(date +%F-%H-%M-%S)
 
 mkdir -p $LOGS_FOLDER
-echo "script staterted executing at $TIMESTAMP" &>>  | tee -a $LOG_FILE #to print on the console
+echo "script staterted executing at $TIMESTAMP"  | tee -a $LOG_FILE #to print on the console
 if [ $USERID -ne 0 ]
 then
   echo -e "$R error:: please run as root user $N" | tee -a $LOG_FILE
