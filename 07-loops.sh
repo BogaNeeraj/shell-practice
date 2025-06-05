@@ -9,9 +9,9 @@ N="\e[0m"
 
 LOGS_FOLDER="/var/logs/shellscript1.logs"
 SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
-LOG_FILE:"$LOGS_FOLDER/$SCRIPT_NAME.log"
+LOG_FILE="$LOGS_FOLDER/$SCRIPT_NAME.log"
 TIMESTAMP=$(date +%F-%M-%D-%S)
-PACKAGES= ("mysql", "nginx")
+PACKAGES=("mysql", "nginx")
 
 mkdir -p $LOGS_FOLDER
 echo "script execution started at $TIMESTAMP" &>> $LOG_FILE
