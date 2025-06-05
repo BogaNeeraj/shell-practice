@@ -26,7 +26,8 @@ then
  echo " my sql is not installed, it is going to install"
  dnf install mysql -y
  VALIDATION $? "MYSQL"
-fi
+
+
 else
  echo "my sql is installed"
 
@@ -39,7 +40,7 @@ then
  echo " my python3 is not installed, it is going to install"
  dnf install python3 -y
 VALIDATION $? "python3"
-fi
+
 else
  echo "python3 is installed"
 
@@ -52,7 +53,7 @@ then
  echo " nginx is not installed, it is going to install"
  dnf install nginx -y
  VALIDATION $? "nginx"
-fi
+ 
 else
  echo "nginx is installed"
 
