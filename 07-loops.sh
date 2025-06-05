@@ -7,10 +7,10 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
-LOGS_FOLDER="/var/logs/shellscript1.logs"
+LOGS_FOLDER="/var/log/shellscript1.logs"
 SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
 LOG_FILE="$LOGS_FOLDER/$SCRIPT_NAME.log"
-TIMESTAMP=$(date +%F-%M-%D-%S)
+TIMESTAMP=$(date +%F-%H-%M-%S)
 #PACKAGES=("mysql", "nginx")
 
 mkdir -p $LOGS_FOLDER
