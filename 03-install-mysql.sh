@@ -18,3 +18,4 @@ then
 else
  echo " installing my sql is ... Failure"
  exit 1
+fi
