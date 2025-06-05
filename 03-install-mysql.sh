@@ -22,6 +22,7 @@ then
  else
   echo " installing my sql is ... Failure"
   exit 1
+fi
 else
  echo "my sql is installed"
  exit 1
