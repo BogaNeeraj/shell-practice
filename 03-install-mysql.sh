@@ -15,15 +15,14 @@ dnf list installed mysql
 if [ $? -ne 0 ]
 then 
  echo " my sql is not installed, it is going to install"
+ dnf install mysql -y
+ if [ $? -eq 0 ]
+ then 
+  echo " installing mysql is success"
+ else
+  echo " installing my sql is ... Failure"
+  exit 1
 else
- echo " my sql is installed"
+ echo "my sql is installed"
+ exit 1
 fi
-#dnf install mysql -y
-
-# if [ $? -eq 0 ]
-# then 
-#  echo " installing mysql is success"
-# else
-#  echo " installing my sql is ... Failure"
-#  exit 1
-# fi
