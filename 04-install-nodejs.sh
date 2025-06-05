@@ -4,7 +4,8 @@ USERID=$(id -u)
 
 if [ $USERID -ne 0 ]
 then 
- echo " please run with the root user"
+ echo " error:: please run with the root user"
+ exit 1
 else
  echo " you are running with root user"
 fi
