@@ -10,7 +10,7 @@ else
  echo " you are running with root user"
 fi
 
-dnf install nodejs:20 -y
+dnf install nodejs -y
 
 if [ $? -ne 0 ]
 then 
